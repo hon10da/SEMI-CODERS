@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, Helvetica, sans-serif; /* تحديد نوع الخط */
+  font-size: 1.2rem; /* تحديد حجم الخط */
+  margin: 0; /* إزالة هامش الصفحة */
+  padding: 0; /* إزالة التباعد الداخلي للصفحة */
+  box-sizing: border-box; /* تأكيد أن الهامش والحدود ضمن الحسابات */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnotP-GExrFwZkIhLsnabRrh4u7o0C7q0P8w&usqp=CAU"); /* تحديد صورة الخلفية */
+  background-repeat: no-repeat; /* عدم تكرار الخلفية */
+  background-size: cover; /* تحديد حجم الخلفية */
+  scroll-behavior: smooth; /* تعيين تأثير التمرير السلس */
+  background-color: #ffffff; /* تحديد لون الخلفية */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  body {
+      margin-top: 100px; /* إضافة هامش إلى الجزء العلوي من الصفحة على الشاشات الصغيرة */
+      background-image: none; /* إزالة الصورة الخلفية عندما يكون عرض الشاشة صغيرًا جدًا */
+      background-color: #f5f5f5; /* تحديد لون الخلفية في الشاشات الصغيرة */
+  }
+}
+
+header {
+  background-color: #ffffff; /* تحديد لون خلفية الهيدر */
+  width: 100%; /* جعل الهيدر يشغل العرض بالكامل */
+  position: fixed; /* تحديد موضع ثابت للهيدر في الجزء العلوي من الصفحة */
+  top: 0; /* تحديد المسافة من الجزء العلوي للصفحة */
+  z-index: 999; /* تحديد الترتيب الأمامي للعناصر (يظهر الهيدر فوق العناصر الأخرى) */
+  display: flex; /* تعيين عرض مرن للهيدر */
+  justify-content: space-between; /* توزيع العناصر بالتساوي على طول المساحة المتاحة */
+  align-items: center; /* توسيط العناصر عموديًا */
+  padding: 15px 10px; /* تحديد التباعد الداخلي للهيدر */
+}
+
+header::after {
+  content: ""; /* إضافة محتوى بعد الهيدر */
+  position: absolute; /* تحديد موضع مطلق للمحتوى */
+  left: 0; /* تحديد المسافة من الجهة اليسرى */
+  right: 0; /* تحديد المسافة من الجهة اليمنى */
+  bottom: 0; /* تحديد المسافة من الجهة السفلية */
+  height: 10px; /* تحديد ارتفاع المحتوى */
+  background-color: #ff4800; /* تحديد لون خلفية المحتوى */
+}
+  
+.logo {
+  text-decoration: none; /* إزالة تأثير التحويل */
+  color: #000000; /* تحديد لون النص */
+  text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+  font-weight: 700; /* تحديد سمك الخط */
+  font-size: 1.2rem; /* تحديد حجم الخط */
+  margin-left: 20px; /* تحديد هامش من الجهة اليسرى */
+}
+  
+.navigation {
+  display: flex; /* تعيين عرض مرن للقائمة */
+  margin-right: 20px; /* تحديد هامش من الجهة اليمنى */
+}
+  
+.navigation a {
+  color: #000000; /* تحديد لون النص */
+  text-decoration: none; /* إزالة تأثير التحويل */
+  font-weight: 500; /* تحديد سمك الخط */
+  font-size: 1em; /* تحديد حجم الخط */
+  padding: 5px 15px; /* تحديد التباعد الداخلي للعناصر */
+}
+.navigation a:hover {
+  color: #ff4800; /* تحديد لون النص عند التحوم */
+}
+  
+.content {
+  text-align: left; /* محاذاة النص إلى اليسار */
+  padding: 20px; /* تحديد التباعد الداخلي */
+  margin-top: 75px; /* تحديد المسافة من الجزء العلوي */
+}
+  
+h1, h2 {
+  text-align: left; /* محاذاة العناوين إلى اليسار */
+  padding: 10px; /* تحديد التباعد الداخلي للعناوين */
+  margin-bottom: 15px; /* تحديد التباعد الخارجي للعناوين */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* إضافة ظل للعناوين */
+  width: 100%; /* جعل عرض العنوان يشغل العرض بالكامل */
+}
+  
+.content p {
+  font-size: 1em; /* تحديد حجم الخط */
+  line-height: 1.5; /* تحديد ارتفاع السطر */
+  padding: 10px 0; /* تحديد التباعد الداخلي */
+}
+  
+.team-members {
+  display: flex; /* تعيين عرض مرن لأعضاء الفريق */
+  flex-wrap: wrap; /* تحديد التفاف العناصر */
+  justify-content: center; /* توسيط العناصر أفقيا */
+}
+  
+.member {
+  margin: 0 10px; /* تحديد الهامش */
+  text-align: center; /* تحديد محاذاة النص */
+  flex: 0 0 33.33%; /* تحديد نسبة العرض */
+}
+  
+.member img {
+  width: 120px; /* تحديد عرض الصورة */
+  height: 120px; /* تحديد ارتفاع الصورة */
+  border-radius: 50%; /* تحديد شكل الحدود */
+  display: block; /* جعل الصورة عنصرًا مستقلًا */
+  margin: 0 auto; /* تحديد هامش اليسار واليمين كـ auto لتوسيط الصورة */
+  margin-bottom: 10px; /* تحديد المسافة من الأسفل */
+}
+footer {
+  background-color: #333; /* تحديد لون خلفية الفوتر */
+  color: #f8f0f0; /* تحديد لون النص */
+}
+
+ul.list-inline {
+  padding: 0; /* إزالة التباعد الداخلي لقائمة الروابط */
+  list-style: none; /* إزالة نقاط القائمة */
+  text-align: center; /* محاذاة النص إلى الوسط */
+  font-size: 18px; /* تحديد حجم الخط */
+  line-height: 1.6; /* تحديد ارتفاع السطر */
+  margin-bottom: 0; /* إزالة التباعد الخارجي للقائمة */
+}
+
+ul.list-inline li {
+    display: inline-block; /* تجعل العناصر تظهر جنبًا إلى جنب */
+}
+
+ul.list-inline li a {
+    color: #f8f0f0; /* تغيير لون الروابط */
+    text-decoration: none; /* إزالة تأثير التحويل */
+    padding: 10px 20px; /* إضافة هامش داخلي للروابط */
+}
+
+ul.list-inline li a:hover {
+    background-color: #f31616; /* تغيير لون الخلفية عند التحوم */
+}
+
+.social a {
+  font-size:24px; /* حجم الخط */
+  width:40px; /* العرض */
+  height:40px; /* الارتفاع */
+  line-height:40px; /* ارتفاع السطر */
+  display:inline-block; /* يجعل العنصر مربعاً ويظهره على سطر واحد */
+  text-align:center; /* توسيط النص داخل العنصر */
+  border-radius:50%; /* تدوير الحواف ليكون شكل العنصر دائري */
+  border:1px solid #ccc; /* إضافة حدود بلون محدد وعرض محدد */
+  margin:0 8px; /* هامش العنصر من الجوانب اليمنى واليسرى */
+  color:inherit; /* توريث لون النص من العنصر الأصلي */
+  opacity:0.75; /* تغيير درجة التعتيم للعنصر */
+}
+
+
+.footer-basic .social > a:hover {
+  opacity: 0.9; /* تحددلك العنصر مرئي بنسبة كام في %  */
+}
+
+.social a:hover {
+  opacity: 0.9; /* نفس الي فوق */
+}
+
+.copyright {
+  margin-top: 15px; /* تحديد هامش من الأعلى */
+  text-align: center; /* محاذاة النص إلى الوسط */
+  font-size: 13px; /* تحديد حجم الخط */
+  color: #aaa; /* تحديد لون النص */
+  margin-bottom: 0; /* إزالة التباعد السفلي */
+}
+
+
+
+
+
